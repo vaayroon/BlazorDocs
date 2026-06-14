@@ -23,4 +23,24 @@ public class ButtonTests : BunitContext
         cut.Find("button").Click();
         Assert.True(clicked);
     }
+
+    [Fact]
+    public void Disabled_true_renders_disabled_attribute()
+    {
+        var cut = Render<Button>(p => p
+            .Add(b => b.Disabled, true)
+            .AddChildContent("Disabled"));
+        var button = cut.Find("button");
+        Assert.True(button.HasAttribute("disabled"));
+    }
+
+    [Fact]
+    public void Disabled_false_omits_disabled_attribute()
+    {
+        var cut = Render<Button>(p => p
+            .Add(b => b.Disabled, false)
+            .AddChildContent("Enabled"));
+        var button = cut.Find("button");
+        Assert.False(button.HasAttribute("disabled"));
+    }
 }
