@@ -1,0 +1,55 @@
+/* BlazorDocs Design Tokens
+   CSS custom properties for color, spacing, radii, and typography.
+   Consumed exclusively via CSS isolation files — never hardcode values there.
+*/
+
+/* ─── Light theme (default) ──────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  /* Colors */
+  --bd-color-primary:        #0066cc;
+  --bd-color-primary-fg:     #ffffff;
+  --bd-color-secondary:      #5a6470;
+  --bd-color-secondary-fg:   #ffffff;
+  --bd-color-surface:        #ffffff;
+  --bd-color-fg:             #111111;
+  --bd-color-border:         #d0d5dd;
+
+  /* Ghost variant — uses surface/fg/border */
+  --bd-color-ghost-bg:       transparent;
+  --bd-color-ghost-fg:       #111111;
+  --bd-color-ghost-border:   #d0d5dd;
+
+  /* Radii */
+  --bd-radius-sm:  4px;
+  --bd-radius-md:  6px;
+  --bd-radius-lg: 10px;
+
+  /* Spacing scale */
+  --bd-space-1:  4px;
+  --bd-space-2:  8px;
+  --bd-space-3: 12px;
+  --bd-space-4: 16px;
+
+  /* Typography */
+  --bd-font-family:    system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --bd-font-size-sm:   0.8125rem;  /* ~13px */
+  --bd-font-size-md:   0.9375rem;  /* ~15px */
+  --bd-font-size-lg:   1.0625rem;  /* ~17px */
+}
+
+/* ─── Dark theme ─────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Colors only — radii, spacing, and font tokens are inherited from :root */
+  --bd-color-primary:        #5ba3f5;
+  --bd-color-primary-fg:     #06121f;
+  --bd-color-secondary:      #9aa4b2;
+  --bd-color-secondary-fg:   #06121f;
+  --bd-color-surface:        #1a1a1a;
+  --bd-color-fg:             #f0f0f0;
+  --bd-color-border:         #3a3f47;
+
+  --bd-color-ghost-bg:       transparent;
+  --bd-color-ghost-fg:       #f0f0f0;
+  --bd-color-ghost-border:   #3a3f47;
+}
