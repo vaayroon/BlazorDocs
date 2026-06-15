@@ -1,0 +1,17 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/samples/">
+    <Project Path="samples/BlazorDocs.Demo.Server/BlazorDocs.Demo.Server.csproj" />
+    <Project Path="samples/BlazorDocs.Demo.Wasm/BlazorDocs.Demo.Wasm.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/BlazorDocs.UI/BlazorDocs.UI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BlazorDocs.Tests/BlazorDocs.Tests.csproj" />
+  </Folder>
+</Solution>

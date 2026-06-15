@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Sample Server [https]",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build Sample Project Server",
+      "cwd": "${workspaceFolder}/samples/BlazorDocs.Demo.Server",
+      "program": "${workspaceFolder}/samples/BlazorDocs.Demo.Server/bin/Debug/net10.0/BlazorDocs.Demo.Server.dll",
+      "args": [],
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchSettingsProfile": "https"
+    },
+    {
+      "name": "Debug Sample Wasm [https] - Standalone",
+      "type": "blazorwasm",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/samples/BlazorDocs.Demo.Wasm"
+    }
+  ]
+}

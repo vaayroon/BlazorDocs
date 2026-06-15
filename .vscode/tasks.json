@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Sample Project Server",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/samples/BlazorDocs.Demo.Server/BlazorDocs.Demo.Server.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary",
+        "/p:Configuration=Debug",
+        "/p:Platform=\"AnyCPU\"",
+        "/p:EnvironmentName=Development"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Launch Sample Project Server",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/samples/BlazorDocs.Demo.Server/BlazorDocs.Demo.Server.csproj",
+        "--launch-profile",
+        "https"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Sample Project Wasm",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/samples/BlazorDocs.Demo.Wasm/BlazorDocs.Demo.Wasm.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary",
+        "/p:Configuration=Debug",
+        "/p:Platform=\"AnyCPU\"",
+        "/p:EnvironmentName=Development"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Launch Sample Project Wasm",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/samples/BlazorDocs.Demo.Wasm/BlazorDocs.Demo.Wasm.csproj",
+        "--launch-profile",
+        "https"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      }
+    }
+  ]
+}
