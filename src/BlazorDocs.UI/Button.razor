@@ -1,0 +1,26 @@
+<button class="@CssClass" disabled="@Disabled"
+        @onclick="OnClick" @attributes="AdditionalAttributes">
+    @ChildContent
+</button>
+
+@code {
+    /// <summary>Visual style of the button.</summary>
+    [Parameter] public ButtonVariant Variant { get; set; } = ButtonVariant.Primary;
+
+    /// <summary>Size preset of the button.</summary>
+    [Parameter] public ButtonSize Size { get; set; } = ButtonSize.Md;
+
+    /// <summary>When true the native disabled attribute is set and the button is not clickable.</summary>
+    [Parameter] public bool Disabled { get; set; }
+
+    /// <summary>Click event callback.</summary>
+    [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    private string CssClass =>
+        $"bd-btn bd-btn--{Variant.ToString().ToLowerInvariant()} bd-btn--{Size.ToString().ToLowerInvariant()}";
+}

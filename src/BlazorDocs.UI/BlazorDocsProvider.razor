@@ -1,0 +1,17 @@
+<div data-theme="@_theme.DataTheme" @attributes="AdditionalAttributes">
+    <CascadingValue Value="_theme" IsFixed="false">@ChildContent</CascadingValue>
+</div>
+
+@code {
+    private readonly BlazorDocsTheme _theme = new();
+
+    /// <summary>The active theme mode. Changes cascade to all descendants.</summary>
+    [Parameter] public ThemeMode Theme { get; set; } = ThemeMode.Light;
+
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
+    protected override void OnParametersSet() => _theme.Mode = Theme;
+}

@@ -1,0 +1,34 @@
+@page "/"
+
+<PageTitle>BlazorDocs — Server Demo</PageTitle>
+
+<h1>Button Component — 3 Variants × 3 Sizes</h1>
+
+<div class="button-grid">
+    @foreach (var variant in Enum.GetValues<ButtonVariant>())
+    {
+        <div class="button-row">
+            <h3>@variant</h3>
+            <div class="button-group">
+                @foreach (var size in Enum.GetValues<ButtonSize>())
+                {
+                    <Button Variant="variant" Size="size" OnClick="OnButtonClick">
+                        @variant @size
+                    </Button>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@if (_lastClicked is not null)
+{
+    <p>Last clicked: <strong>@_lastClicked</strong></p>
+}
+
+@code {
+    private string? _lastClicked;
+
+    private void OnButtonClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs _) =>
+        _lastClicked = DateTime.Now.ToString("HH:mm:ss");
+}

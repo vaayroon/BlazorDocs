@@ -1,0 +1,78 @@
+/* Button component CSS isolation.
+   All values reference --bd-* tokens from blazordocs.css.
+   No literal colors or hard-coded sizes are permitted here.
+*/
+
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+.bd-btn {
+    display:          inline-flex;
+    align-items:      center;
+    justify-content:  center;
+    gap:              var(--bd-space-2);
+    border-radius:    var(--bd-radius-md);
+    font-family:      var(--bd-font-family);
+    font-size:        var(--bd-font-size-md);
+    font-weight:      500;
+    line-height:      1;
+    cursor:           pointer;
+    border:           1px solid transparent;
+    transition:       opacity 0.15s ease, background-color 0.15s ease;
+    white-space:      nowrap;
+    text-decoration:  none;
+
+    /* Default (Md) padding */
+    padding: var(--bd-space-2) var(--bd-space-3);
+}
+
+.bd-btn:disabled {
+    opacity: 0.45;
+    cursor:  not-allowed;
+}
+
+/* ─── Variants ───────────────────────────────────────────────────────────── */
+.bd-btn--primary {
+    background-color: var(--bd-color-primary);
+    color:            var(--bd-color-primary-fg);
+    border-color:     var(--bd-color-primary);
+}
+
+.bd-btn--primary:hover:not(:disabled) {
+    opacity: 0.88;
+}
+
+.bd-btn--secondary {
+    background-color: var(--bd-color-secondary);
+    color:            var(--bd-color-secondary-fg);
+    border-color:     var(--bd-color-secondary);
+}
+
+.bd-btn--secondary:hover:not(:disabled) {
+    opacity: 0.88;
+}
+
+.bd-btn--ghost {
+    background-color: var(--bd-color-ghost-bg);
+    color:            var(--bd-color-ghost-fg);
+    border-color:     var(--bd-color-ghost-border);
+}
+
+.bd-btn--ghost:hover:not(:disabled) {
+    background-color: var(--bd-color-border);
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────────────── */
+.bd-btn--sm {
+    padding:   var(--bd-space-1) var(--bd-space-2);
+    font-size: var(--bd-font-size-sm);
+}
+
+.bd-btn--md {
+    padding:   var(--bd-space-2) var(--bd-space-3);
+    font-size: var(--bd-font-size-md);
+}
+
+.bd-btn--lg {
+    padding:   var(--bd-space-3) var(--bd-space-4);
+    font-size: var(--bd-font-size-lg);
+    border-radius: var(--bd-radius-lg);
+}

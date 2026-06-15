@@ -1,0 +1,22 @@
+@inherits LayoutComponentBase
+
+<BlazorDocsProvider Theme="_mode">
+    <div class="layout">
+        <header class="layout-header">
+            <strong>BlazorDocs Demo — WebAssembly</strong>
+            <button class="theme-toggle" @onclick="Toggle">
+                @(_mode == ThemeMode.Dark ? "Switch to Light" : "Switch to Dark")
+            </button>
+        </header>
+        <main class="layout-main">
+            @Body
+        </main>
+    </div>
+</BlazorDocsProvider>
+
+@code {
+    private ThemeMode _mode = ThemeMode.Light;
+
+    private void Toggle() =>
+        _mode = _mode == ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light;
+}

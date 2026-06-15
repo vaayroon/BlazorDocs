@@ -16,17 +16,17 @@ Razor Class Library (RCL).
 
 **Goal:** A working, verifiable skeleton in both hosting models.
 
-- [ ] Create `BlazorDocs.sln` with the project structure
+- [x] Create `BlazorDocs.sln` with the project structure
   (`src/BlazorDocs.UI`, `samples/BlazorDocs.Demo.Server`,
   `samples/BlazorDocs.Demo.Wasm`, `tests/BlazorDocs.Tests`).
-- [ ] Enable CSS isolation in the RCL.
-- [ ] Theming system in `wwwroot/blazordocs.css` with CSS variables
+- [x] Enable CSS isolation in the RCL.
+- [x] Theming system in `wwwroot/blazordocs.css` with CSS variables
   (colors, radii, spacing, typography) and light/dark via `[data-theme="dark"]`.
-- [ ] `BlazorDocsProvider` root component (theme via `CascadingValue`).
-- [ ] First primitive: `Button` (Variant / Size / Disabled / OnClick / ChildContent).
-- [ ] Home page in both samples showing Button variants and sizes.
-- [ ] bUnit test for Button (renders text, fires OnClick).
-- [ ] `README.md`, `ROADMAP.md`, `LICENSE` (MIT).
+- [x] `BlazorDocsProvider` root component (theme via `CascadingValue`).
+- [x] First primitive: `Button` (Variant / Size / Disabled / OnClick / ChildContent).
+- [x] Home page in both samples showing Button variants and sizes.
+- [x] bUnit test for Button (renders text, fires OnClick).
+- [x] `README.md`, `ROADMAP.md`, `LICENSE` (MIT).
 
 **Estimate:** 1-2 weeks.
 

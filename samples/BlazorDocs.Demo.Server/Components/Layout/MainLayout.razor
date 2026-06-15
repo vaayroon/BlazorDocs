@@ -1,0 +1,28 @@
+@inherits LayoutComponentBase
+
+<BlazorDocsProvider Theme="_mode">
+    <div class="layout">
+        <header class="layout-header">
+            <strong>BlazorDocs Demo — Server</strong>
+            <button class="theme-toggle" @onclick="Toggle">
+                @(_mode == ThemeMode.Dark ? "Switch to Light" : "Switch to Dark")
+            </button>
+        </header>
+        <main class="layout-main">
+            @Body
+        </main>
+    </div>
+</BlazorDocsProvider>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    private ThemeMode _mode = ThemeMode.Light;
+
+    private void Toggle() =>
+        _mode = _mode == ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light;
+}
